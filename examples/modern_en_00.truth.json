@@ -1,0 +1,11 @@
+{
+  "invoice_number": "INV-57466",
+  "invoice_date": "2026-07-23",
+  "supplier_name": "Harbor Line Logistics",
+  "supplier_vat_id": "DE569671212",
+  "customer_name": "Rivet & Bolt Trading Ltd",
+  "currency": "USD",
+  "subtotal": "15810.97",
+  "tax_amount": "3320.30",
+  "total": "19131.27"
+}

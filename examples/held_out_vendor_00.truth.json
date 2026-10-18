@@ -1,0 +1,11 @@
+{
+  "invoice_number": "A93-3567",
+  "invoice_date": "2026-03-07",
+  "supplier_name": "Vértice Robotics S.L.",
+  "supplier_vat_id": "ESA70357652",
+  "customer_name": "Grupo Alcor Retail S.A.",
+  "currency": "EUR",
+  "subtotal": "1460.75",
+  "tax_amount": "306.76",
+  "total": "1767.51"
+}

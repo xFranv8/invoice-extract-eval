@@ -1,0 +1,11 @@
+{
+  "invoice_number": "F-2026-1540",
+  "invoice_date": "2026-09-26",
+  "supplier_name": "Ingeniería Albor SLU",
+  "supplier_vat_id": "ESB66318075",
+  "customer_name": "Puerto Seco Logística S.L.",
+  "currency": "EUR",
+  "subtotal": "13411.38",
+  "tax_amount": "1341.14",
+  "total": "14752.52"
+}

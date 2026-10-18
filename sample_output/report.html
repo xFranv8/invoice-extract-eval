@@ -1,0 +1,67 @@
+<!doctype html><meta charset='utf-8'><title>Extraction report</title><style>
+body{font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;margin:32px;color:#1f2328;
+max-width:1000px}
+h1{font-size:24px;margin:0 0 4px} .sub{color:#57606a;margin-bottom:24px}
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:28px}
+.card{border:1px solid #d0d7de;border-radius:8px;padding:14px}
+.card b{display:block;font-size:26px} .card span{color:#57606a;font-size:13px}
+table{border-collapse:collapse;width:100%;margin-bottom:28px;font-size:14px}
+th,td{border-bottom:1px solid #d8dee4;padding:7px 8px;text-align:left}
+th{background:#f6f8fa} .bar{background:#eaeef2;border-radius:4px;height:10px;width:220px}
+.bar i{display:block;height:10px;border-radius:4px;background:#2da44e}
+.bad{color:#cf222e;font-weight:600} h2{font-size:17px;margin-top:8px}
+</style>
+<h1>Invoice extraction: accuracy report</h1>
+<div class='sub'>Extractor <code>rules</code> · 53 documents · generated 2026-10-18 14:49</div><div class='cards'>
+<div class='card'><b>75%</b><span>documents fully correct</span></div>
+<div class='card'><b>13/53</b><span>sent to human review</span></div>
+<div class='card'><b>100%</b><span>of errors caught by review</span></div>
+<div class='card'><b>0%</b><span>auto-accepted with an error</span></div>
+</div><h2>Accuracy per field</h2><table><tr><th>Field</th><th></th><th>Accuracy</th></tr>
+<tr><td>invoice_number</td><td><div class='bar'><i style='width:75%'></i></div></td><td>75%</td></tr>
+<tr><td>invoice_date</td><td><div class='bar'><i style='width:75%'></i></div></td><td>75%</td></tr>
+<tr><td>supplier_name</td><td><div class='bar'><i style='width:75%'></i></div></td><td>75%</td></tr>
+<tr><td>supplier_vat_id</td><td><div class='bar'><i style='width:94%'></i></div></td><td>94%</td></tr>
+<tr><td>customer_name</td><td><div class='bar'><i style='width:75%'></i></div></td><td>75%</td></tr>
+<tr><td>currency</td><td><div class='bar'><i style='width:94%'></i></div></td><td>94%</td></tr>
+<tr><td>subtotal</td><td><div class='bar'><i style='width:75%'></i></div></td><td>75%</td></tr>
+<tr><td>tax_amount</td><td><div class='bar'><i style='width:94%'></i></div></td><td>94%</td></tr>
+<tr><td>total</td><td><div class='bar'><i style='width:94%'></i></div></td><td>94%</td></tr>
+</table><h2>Per layout</h2><table><tr><th>Layout</th><th>Docs</th><th>Fully correct</th><th>Sent to review</th></tr>
+<tr><td>classic_es</td><td>10</td><td>10</td><td>0</td></tr>
+<tr><td>compact_codes</td><td>10</td><td>10</td><td>0</td></tr>
+<tr><td>held_out_vendor</td><td>10</td><td>0</td><td>10</td></tr>
+<tr><td>modern_en</td><td>10</td><td>10</td><td>0</td></tr>
+<tr><td>reverse_charge_eu</td><td>10</td><td>10</td><td>0</td></tr>
+<tr><td>scanned</td><td>3</td><td>0</td><td>3</td></tr>
+</table>
+<h2>Review queue</h2><table><tr><th>Document</th><th>Reasons</th></tr>
+<tr><td>held_out_vendor_00.pdf</td><td>missing invoice_number; missing invoice_date; cannot cross-check total (subtotal or tax missing)</td></tr>
+<tr><td>held_out_vendor_01.pdf</td><td>missing invoice_number; missing invoice_date; cannot cross-check total (subtotal or tax missing)</td></tr>
+<tr><td>held_out_vendor_02.pdf</td><td>missing invoice_number; missing invoice_date; cannot cross-check total (subtotal or tax missing)</td></tr>
+<tr><td>held_out_vendor_03.pdf</td><td>missing invoice_number; missing invoice_date; cannot cross-check total (subtotal or tax missing)</td></tr>
+<tr><td>held_out_vendor_04.pdf</td><td>missing invoice_number; missing invoice_date; cannot cross-check total (subtotal or tax missing)</td></tr>
+<tr><td>held_out_vendor_05.pdf</td><td>missing invoice_number; missing invoice_date; cannot cross-check total (subtotal or tax missing)</td></tr>
+<tr><td>held_out_vendor_06.pdf</td><td>missing invoice_number; missing invoice_date; cannot cross-check total (subtotal or tax missing)</td></tr>
+<tr><td>held_out_vendor_07.pdf</td><td>missing invoice_number; missing invoice_date; cannot cross-check total (subtotal or tax missing)</td></tr>
+<tr><td>held_out_vendor_08.pdf</td><td>missing invoice_number; missing invoice_date; cannot cross-check total (subtotal or tax missing)</td></tr>
+<tr><td>held_out_vendor_09.pdf</td><td>missing invoice_number; missing invoice_date; cannot cross-check total (subtotal or tax missing)</td></tr>
+<tr><td>scanned_00.pdf</td><td>no text extracted (image-only PDF?): needs OCR or a vision model</td></tr>
+<tr><td>scanned_01.pdf</td><td>no text extracted (image-only PDF?): needs OCR or a vision model</td></tr>
+<tr><td>scanned_02.pdf</td><td>no text extracted (image-only PDF?): needs OCR or a vision model</td></tr>
+</table>
+<h2>Field errors</h2><table><tr><th>Document</th><th>Wrong fields</th><th>In review queue</th></tr>
+<tr><td>held_out_vendor_00.pdf</td><td>invoice_number, invoice_date, supplier_name, customer_name, subtotal</td><td>yes</td></tr>
+<tr><td>held_out_vendor_01.pdf</td><td>invoice_number, invoice_date, supplier_name, customer_name, subtotal</td><td>yes</td></tr>
+<tr><td>held_out_vendor_02.pdf</td><td>invoice_number, invoice_date, supplier_name, customer_name, subtotal</td><td>yes</td></tr>
+<tr><td>held_out_vendor_03.pdf</td><td>invoice_number, invoice_date, supplier_name, customer_name, subtotal</td><td>yes</td></tr>
+<tr><td>held_out_vendor_04.pdf</td><td>invoice_number, invoice_date, supplier_name, customer_name, subtotal</td><td>yes</td></tr>
+<tr><td>held_out_vendor_05.pdf</td><td>invoice_number, invoice_date, supplier_name, customer_name, subtotal</td><td>yes</td></tr>
+<tr><td>held_out_vendor_06.pdf</td><td>invoice_number, invoice_date, supplier_name, customer_name, subtotal</td><td>yes</td></tr>
+<tr><td>held_out_vendor_07.pdf</td><td>invoice_number, invoice_date, supplier_name, customer_name, subtotal</td><td>yes</td></tr>
+<tr><td>held_out_vendor_08.pdf</td><td>invoice_number, invoice_date, supplier_name, customer_name, subtotal</td><td>yes</td></tr>
+<tr><td>held_out_vendor_09.pdf</td><td>invoice_number, invoice_date, supplier_name, customer_name, subtotal</td><td>yes</td></tr>
+<tr><td>scanned_00.pdf</td><td>invoice_number, invoice_date, supplier_name, supplier_vat_id, customer_name, currency, subtotal, tax_amount, total</td><td>yes</td></tr>
+<tr><td>scanned_01.pdf</td><td>invoice_number, invoice_date, supplier_name, supplier_vat_id, customer_name, currency, subtotal, tax_amount, total</td><td>yes</td></tr>
+<tr><td>scanned_02.pdf</td><td>invoice_number, invoice_date, supplier_name, supplier_vat_id, customer_name, currency, subtotal, tax_amount, total</td><td>yes</td></tr>
+</table>
